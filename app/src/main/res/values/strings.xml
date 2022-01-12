@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Evaluation</string>
+
+    <string name="lyt">LYT</string>
+    <string name="search">Search</string>
+    <string name="popular">Popular</string>
+    <string name="most_viewed">Most Viewed</string>
+    <string name="most_shared">Most Shared</string>
+    <string name="most_emailed">Most Emailed</string>
+    <string name="articles">Articles</string>
+    <string name="search_articles">Search Articles Here...</string>
+    <string name="text">Text : </string>
+    <string name="date_published">Date Published : </string>
+    <string name="no_internet">No Internet Connection</string>
+
+</resources>
