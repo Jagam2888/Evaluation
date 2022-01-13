@@ -14,7 +14,7 @@ class CheckInternetConnectivity {
             val cm =
                     context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 
-            cm?.let {
+            cm.let {
                 it.getNetworkCapabilities(cm.activeNetwork)?.apply {
                     results = when{
                         hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> true

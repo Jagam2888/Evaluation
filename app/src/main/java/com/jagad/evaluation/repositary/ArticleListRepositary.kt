@@ -12,9 +12,9 @@ class ArticleListRepositary @Inject constructor(
     private val myApi: MyApi,
 ):SafeAPIRequest() {
 
-    suspend fun getArticles(searchTxt:String): ArticleResponse {
+    suspend fun searchArticlesAPI(searchTxt:String): ArticleResponse {
         return apiRequest {
-            myApi.getArticles(searchTxt,Passparams.MYKEY)
+            myApi.searchArticlesAPI(searchTxt,Passparams.MYKEY)
         }
     }
 

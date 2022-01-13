@@ -9,7 +9,7 @@ import retrofit2.http.*
 interface MyApi {
 
     @GET(Passparams.SEARCH_ARTICLES_API)
-    suspend fun getArticles(@Query("q") searchTxt:String,@Query("api-key") myKey:String):Response<ArticleResponse>
+    suspend fun searchArticlesAPI(@Query("q") searchTxt:String,@Query("api-key") myKey:String):Response<ArticleResponse>
 
     @GET(Passparams.MOST_VIEWED_ARTICLES_API)
     suspend fun getMostViewedArticles(@Query("api-key") myKey:String):Response<MostPopularResponse>

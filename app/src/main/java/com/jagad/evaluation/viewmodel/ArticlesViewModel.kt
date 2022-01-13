@@ -34,12 +34,12 @@ class ArticlesViewModel @Inject constructor(
 
     val errorMsg = ObservableField<String>()
 
-    fun getArticles(searchTxt:String) {
+    fun searchArticles(searchTxt:String) {
         val list = ArrayList<ArticleListData>()
         _networkResponse.value = NetworkResult.Loading()
         Couritnes.main {
             try {
-                val response = articlesRepositary.getArticles(searchTxt)
+                val response = articlesRepositary.searchArticlesAPI(searchTxt)
                 if (response.status == "OK"){
                         _networkResponse.value = NetworkResult.Success("Success")
                     if (response.response.docs.isNotEmpty()){

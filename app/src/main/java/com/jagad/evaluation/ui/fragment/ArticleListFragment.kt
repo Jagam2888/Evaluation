@@ -44,7 +44,7 @@ class ArticleListFragment : Fragment(R.layout.fragment_article_list) {
 
     private fun navigate(){
         when(val navigateFrom = arguments?.getString(Passparams.NAVIGATE_FROM,"")){
-            Passparams.SEARCH -> articleViewModel.getArticles(arguments?.getString(Passparams.SEARCH_TXT,"")!!)
+            Passparams.SEARCH -> articleViewModel.searchArticles(arguments?.getString(Passparams.SEARCH_TXT,"")!!)
             else -> articleViewModel.getMostPopularAPI(navigateFrom!!)
         }
     }
@@ -61,7 +61,6 @@ class ArticleListFragment : Fragment(R.layout.fragment_article_list) {
                 }
                 is NetworkResult.Success -> {
                     hide(articlesBinding.progressBar)
-                    context?.toast(it.message!!)
                 }
                 is NetworkResult.Failure -> {
                     hide(articlesBinding.progressBar)

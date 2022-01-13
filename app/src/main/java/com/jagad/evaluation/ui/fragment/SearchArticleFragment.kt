@@ -10,6 +10,10 @@ import com.jagad.evaluation.R
 import com.jagad.evaluation.util.Passparams
 import dagger.hilt.android.AndroidEntryPoint
 
+/**
+ * Created by jagad on 1/11/2022
+ */
+
 @AndroidEntryPoint
 class SearchArticleFragment : Fragment(R.layout.fragment_search_article) {
 
